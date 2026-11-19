@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRPB Admin Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/config.js"></script>
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Admin Dashboard</h1>
+        <p>Incident and Registered User Management</p>
+        <a href="index.html" class="home-link">Home</a>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Incidents</h3>
+                <p id="totalIncidents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Active Incidents</h3>
+                <p id="activeIncidents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Notifications</h3>
+                <p id="totalNotifications">0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Registered Users</h2>
+                <button id="refreshAdminButton" type="button">
+                    Refresh Dashboard
+                </button>
+            </div>
+            <div id="adminUsers">Loading users...</div>
+        </section>
+
+        <section class="panel">
+            <h2>Incident Management</h2>
+            <div id="adminIncidents">Loading incidents...</div>
+        </section>
+
+        <section class="panel">
+            <h2>Notification History</h2>
+            <div id="adminNotifications">
+                Loading notifications...
+            </div>
+        </section>
+
+        <p id="adminMessage" class="message"></p>
+    </main>
+
+    <footer>Incident Response Panic Button</footer>
+</body>
+</html>

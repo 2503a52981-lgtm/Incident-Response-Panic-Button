@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRPB User Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/config.js"></script>
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>User Dashboard</h1>
+        <p>Register and access emergency SOS services</p>
+        <a href="index.html" class="home-link">Home</a>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h2>User Registration</h2>
+
+            <form id="registerForm">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" required>
+
+                <label for="email">Email Address</label>
+                <input id="email" type="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" required>
+
+                <label class="consent">
+                    <input id="locationConsent" type="checkbox">
+                    I consent to sharing my location for nearby emergency
+                    notifications.
+                </label>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p id="registerMessage" class="message"></p>
+            <p id="registeredUser"></p>
+        </section>
+
+        <section class="panel">
+            <h2>Emergency SOS</h2>
+
+            <p>
+                Share your current location to report an emergency.
+                Nearby consenting registered users within 5 km may
+                receive an email alert.
+            </p>
+
+            <button id="sosButton" class="sos-button" type="button">
+                ACTIVATE SOS
+            </button>
+
+            <p id="sosMessage" class="message"></p>
+
+            <h3>Location fallback</h3>
+            <p class="small">
+                If your browser cannot access GPS, enter your coordinates.
+                You can find them using a map application.
+            </p>
+
+            <label for="latitude">Latitude</label>
+            <input id="latitude" type="number" step="any"
+                   placeholder="Example: 17.3850">
+
+            <label for="longitude">Longitude</label>
+            <input id="longitude" type="number" step="any"
+                   placeholder="Example: 78.4867">
+        </section>
+
+        <section class="panel">
+            <h2>My Incident History</h2>
+            <button id="refreshUserButton" type="button" class="secondary">
+                Refresh Incidents
+            </button>
+            <div id="userIncidents">
+                <p>Register to view your incident history.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>Incident Response Panic Button</footer>
+</body>
+</html>
